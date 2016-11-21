@@ -14,6 +14,7 @@
 	
 	<?php
 	include 'util.php';
+	echo get_command ( $_POST ["id"], $_POST ["title"] );
 	exec ( get_command ( $_POST ["id"], $_POST ["title"] ) );
 	?>
 

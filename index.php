@@ -15,7 +15,7 @@
 		</p>
 		<p>
 			<input type="submit" title="Download" value="Download" /> <input
-				type="reset" title="Clean" value="Reset" />
+				type="reset" title="Clean" value="Clean" />
 		</p>
 	</form>
 </body>
