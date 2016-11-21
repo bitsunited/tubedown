@@ -11,10 +11,6 @@
 
 	<p>Youtube Video ID: <?php echo $_POST["id"]; ?></p>
 	<p>Title: <?php echo $_POST ["title"]; ?></p>
-	<p>Command: <?php
-	include 'util.php';
-	echo get_command ( $_POST ["id"], $_POST ["title"] );
-	?></p>
 	
 	<?php
 	include 'util.php';
