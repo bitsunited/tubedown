@@ -16,4 +16,7 @@ function get_title($id) {
 function get_duration($id) {
 	return exec("youtube-dl --get-duration " . $id);
 }
+function get_command($id, $title) {
+	return exec("youtube-dl -o /storage/media/youtube/\"". $title . ".%(ext)s\" " . $id . " &");
+}
 ?>

@@ -7,28 +7,19 @@
 <body>
 	<h1>TubeDown</h1>
 	<h3>Youtube Download Helper</h3>
-	<h2>You entered the following Youtube Video to download.</h2>
+	<h2>Your video will be downloaded...</h2>
 
-	<p>Input: <?php echo $_POST["urlorid"]; ?><br />
-Youtube Video ID: <?php
-include 'util.php';
-$id = get_id ( $_POST ["urlorid"] );
-echo $id;
-?> <br />
-Youtube Video URL: <?php echo get_url ( $id ); ?><br />
-Title: <?php
-$title = get_title ( $id );
-echo $title;
-?>
-Duration: <?php echo get_duration($id); ?> <br />
+	<p>Youtube Video ID: <?php echo $_POST["id"]; ?></p>
+	<p>Title: <?php echo $_POST ["title"]; ?></p>
+	
+	<?php
+	include 'util.php';
+	exec ( get_command ( $_POST ["id"], $_POST ["title"] ) );
+	?>
+
+	<p>
+		<a href="index.php">Back</a>
 	</p>
-	<form action="download.php" method="post">
-		<p>
-			Title: <input type="text" name="title" value="$title" />
-		</p>
-		<p>
-			<input type="submit" title="Confirm" />
-		</p>
-	</form>
+
 </body>
 </html>

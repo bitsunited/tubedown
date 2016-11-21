@@ -14,7 +14,8 @@
 			Youtube Video URL or ID: <input type="text" name="urlorid" />
 		</p>
 		<p>
-			<input type="submit" title="Download" />
+			<input type="submit" title="Download" value="Download" /> <input
+				type="reset" title="Clean" value="Reset" />
 		</p>
 	</form>
 </body>
