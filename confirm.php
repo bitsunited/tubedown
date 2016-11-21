@@ -24,7 +24,7 @@ Duration: <?php echo get_duration($id); ?> <br />
 	</p>
 	<form action="download.php" method="post">
 		<p>
-			Title: <input type="text" name="title" value="$title" />
+			Title: <input type="text" name="title" value="<?php echo $title ?>" />
 		</p>
 		<p>
 			<input type="submit" title="Confirm" />
